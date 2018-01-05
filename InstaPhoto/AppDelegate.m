@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedViewController.h"
+#import "FavoritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,20 +22,17 @@
     // Override point for customization after application launch.
     
     // Feed View Controller
-    self.feedViewController = [[UIViewController alloc] init];
-    self.feedViewController.title = @"Feed";
-    self.feedViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_feed"];
-    self.feedViewController.view.backgroundColor = [UIColor blueColor];
+    FeedViewController *feedViewController = [[FeedViewController alloc] init];
     
     // Favorites View Controller
-    self.favoritesViewController = [[UIViewController alloc] init];
-    self.favoritesViewController.title = @"Favorites";
-    self.favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"tab_icon_favorites"];
-    self.favoritesViewController.view.backgroundColor = [UIColor redColor];
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+
+    // Profile View Controller
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
     
     // Tab Bar Controller
     self.tabBarController = [[UITabBarController alloc] init];
-    [self.tabBarController setViewControllers:@[self.feedViewController, self.favoritesViewController]];
+    [self.tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
     
     // Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
