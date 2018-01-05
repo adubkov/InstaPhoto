@@ -39,6 +39,8 @@
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     
+    NSLog(@"Screen resolution: %f x %f", self.window.screen.bounds.size.height, self.window.screen.bounds.size.width);
+    
     return YES;
 }
 
