@@ -23,6 +23,12 @@
 		49831A802000705C007E241D /* button_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A7E2000705C007E241D /* button_on.png */; };
 		49831A812000705C007E241D /* button_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A7F2000705C007E241D /* button_off.png */; };
 		49831A842000D42D007E241D /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49831A832000D42D007E241D /* FeedTableViewController.m */; };
+		49831A872000E668007E241D /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49831A862000E668007E241D /* PhotoViewController.m */; };
+		49831A8D2000E8E6007E241D /* image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A882000E8E5007E241D /* image_2.png */; };
+		49831A8E2000E8E6007E241D /* image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A892000E8E5007E241D /* image_1.png */; };
+		49831A8F2000E8E6007E241D /* image_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A8A2000E8E5007E241D /* image_5.png */; };
+		49831A902000E8E6007E241D /* image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A8B2000E8E5007E241D /* image_4.png */; };
+		49831A912000E8E6007E241D /* image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 49831A8C2000E8E6007E241D /* image_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +56,13 @@
 		49831A7F2000705C007E241D /* button_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_off.png; sourceTree = "<group>"; };
 		49831A822000D42D007E241D /* FeedTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		49831A832000D42D007E241D /* FeedTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		49831A852000E668007E241D /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		49831A862000E668007E241D /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		49831A882000E8E5007E241D /* image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_2.png; sourceTree = "<group>"; };
+		49831A892000E8E5007E241D /* image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_1.png; sourceTree = "<group>"; };
+		49831A8A2000E8E5007E241D /* image_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_5.png; sourceTree = "<group>"; };
+		49831A8B2000E8E5007E241D /* image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_4.png; sourceTree = "<group>"; };
+		49831A8C2000E8E6007E241D /* image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +104,8 @@
 				49831A781FFF8AE3007E241D /* ProfileViewController.m */,
 				49831A822000D42D007E241D /* FeedTableViewController.h */,
 				49831A832000D42D007E241D /* FeedTableViewController.m */,
+				49831A852000E668007E241D /* PhotoViewController.h */,
+				49831A862000E668007E241D /* PhotoViewController.m */,
 				49831A741FFF880F007E241D /* FavoritesViewController.h */,
 				49831A751FFF880F007E241D /* FavoritesViewController.m */,
 				49831A591FFF7CA0007E241D /* ViewController.h */,
@@ -107,6 +122,11 @@
 		49831A6E1FFF81F0007E241D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				49831A892000E8E5007E241D /* image_1.png */,
+				49831A882000E8E5007E241D /* image_2.png */,
+				49831A8C2000E8E6007E241D /* image_3.png */,
+				49831A8B2000E8E5007E241D /* image_4.png */,
+				49831A8A2000E8E5007E241D /* image_5.png */,
 				49831A7F2000705C007E241D /* button_off.png */,
 				49831A7E2000705C007E241D /* button_on.png */,
 				49831A7C1FFF8C1E007E241D /* photo.jpg */,
@@ -177,11 +197,16 @@
 			files = (
 				49831A802000705C007E241D /* button_on.png in Resources */,
 				49831A7D1FFF8C1E007E241D /* photo.jpg in Resources */,
+				49831A8E2000E8E6007E241D /* image_1.png in Resources */,
 				49831A631FFF7CA0007E241D /* LaunchScreen.storyboard in Resources */,
 				49831A812000705C007E241D /* button_off.png in Resources */,
+				49831A912000E8E6007E241D /* image_3.png in Resources */,
+				49831A8F2000E8E6007E241D /* image_5.png in Resources */,
+				49831A8D2000E8E6007E241D /* image_2.png in Resources */,
 				49831A6D1FFF81D4007E241D /* tab_icon_feed in Resources */,
 				49831A701FFF839F007E241D /* tab_icon_favorites.png in Resources */,
 				49831A601FFF7CA0007E241D /* Assets.xcassets in Resources */,
+				49831A902000E8E6007E241D /* image_4.png in Resources */,
 				49831A7B1FFF8B84007E241D /* tab_icon_profile.png in Resources */,
 				49831A5E1FFF7CA0007E241D /* Main.storyboard in Resources */,
 			);
@@ -195,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49831A761FFF880F007E241D /* FavoritesViewController.m in Sources */,
+				49831A872000E668007E241D /* PhotoViewController.m in Sources */,
 				49831A5B1FFF7CA0007E241D /* ViewController.m in Sources */,
 				49831A661FFF7CA0007E241D /* main.m in Sources */,
 				49831A842000D42D007E241D /* FeedTableViewController.m in Sources */,

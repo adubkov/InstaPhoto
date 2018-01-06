@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FeedViewController.h"
+#import "FeedTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // Feed View Controller
-    FeedViewController *feedViewController = [[FeedViewController alloc] init];
+    // Feed Table View Controller
+    FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     // Navigation Controller
-    self.navController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
+    self.navController = [[UINavigationController alloc]
+        initWithRootViewController:feedTableViewController];
     
     // Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -34,7 +35,6 @@
     
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
