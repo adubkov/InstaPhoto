@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import "FeedViewController.h"
-#import "FavoritesViewController.h"
-#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,19 +22,12 @@
     // Feed View Controller
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
     
-    // Favorites View Controller
-    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
-
-    // Profile View Controller
-    ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
-    
-    // Tab Bar Controller
-    self.tabBarController = [[UITabBarController alloc] init];
-    [self.tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
+    // Navigation Controller
+    self.navController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
     
     // Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     
     NSLog(@"Screen resolution: %f x %f", self.window.screen.bounds.size.height, self.window.screen.bounds.size.width);

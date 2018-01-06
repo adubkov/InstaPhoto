@@ -27,11 +27,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+
+    // Photo View
+    UIButton *buttonView = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonView setImage:[UIImage imageNamed:@"button_on"]
+                forState:UIControlStateNormal];
+    [buttonView setImage:[UIImage imageNamed:@"button_off"]
+                forState:UIControlStateHighlighted];
+    [buttonView setFrame:CGRectMake(150, 150, 100, 100)];
+    [self.view addSubview:buttonView];
+    [buttonView addTarget:self
+                   action:@selector(showZoomedPicture:)
+         forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showZoomedPicture:(UIButton *)sender {
+    UIViewController *zoomedImageViewController = [[UIViewController alloc] init];
+    zoomedImageViewController.view.frame = self.view.frame;
+    zoomedImageViewController.title = @"My photo";
+    
+    UIImageView *photoView = [[UIImageView alloc]
+                              initWithImage:[UIImage imageNamed:@"photo.jpg"]];
+    [photoView setContentMode:UIViewContentModeScaleAspectFit];
+    photoView.frame = zoomedImageViewController.view.frame;
+    [zoomedImageViewController.view addSubview:photoView];
+    
+    [self.navigationController pushViewController:zoomedImageViewController animated:NO];
 }
 
 /*

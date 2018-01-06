@@ -10,4 +10,6 @@
 
 @interface FavoritesViewController : UIViewController
 
+- (void)showZoomedPicture:(UIButton *)sender;
+
 @end

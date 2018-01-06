@@ -7,6 +7,8 @@
 //
 
 #import "FeedViewController.h"
+#import "FavoritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface FeedViewController ()
 
@@ -27,11 +29,46 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
+    
+    // Favorites Button
+    UIButton *favoritesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    favoritesButton.frame = CGRectMake(60, 100, 200, 44);
+    [favoritesButton setTitle:@"View Favorites" forState:UIControlStateNormal];
+    favoritesButton.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:favoritesButton];
+    [favoritesButton addTarget:self action:@selector(showFavorites:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // Profile Button
+    UIButton *profileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    profileButton.frame = CGRectMake(60, 200, 200, 44);
+    [profileButton setTitle:@"View Profile" forState:UIControlStateNormal];
+    profileButton.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:profileButton];
+    [profileButton addTarget:self action:@selector(showProfile:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showFavorites:(UIButton *)sender {
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    [self.navigationController pushViewController:favoritesViewController animated:YES];
+}
+
+- (void)showProfile:(UIButton *)sender {
+    // Profile View Controller
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    UINavigationController *profileNavController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+
+    // Tab Bar Controller
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[profileNavController, favoritesViewController]];
+
+    [self.navigationController pushViewController:tabBarController animated:YES];
 }
 
 /*

@@ -10,4 +10,9 @@
 
 @interface FeedViewController : UIViewController
 
+@property (strong, nonatomic) UINavigationController *navController;
+
+- (void)showFavorites:(UIButton *)sender;
+- (void)showProfile:(UIButton *)sender;
+
 @end
