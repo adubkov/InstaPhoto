@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "FavoritesViewController.h"
 #import "FeedTableViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,16 +21,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // Feed Table View Controller
     FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *feedNavController = [[UINavigationController alloc] initWithRootViewController:feedTableViewController];
     
-    // Navigation Controller
-    self.navController = [[UINavigationController alloc]
-        initWithRootViewController:feedTableViewController];
+    ProfileViewController *profileController = [[ProfileViewController alloc] init];
+    UINavigationController *profileNavController = [[UINavigationController alloc] initWithRootViewController:profileController];
+    
+    FavoritesViewController *favController = [[FavoritesViewController alloc] init];
+    UINavigationController *favNavController = [[UINavigationController alloc] initWithRootViewController:favController];
+    
+    self.tabController = [[UITabBarController alloc] init];
+    self.tabController.viewControllers = @[feedNavController, favNavController, profileNavController];
     
     // Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navController;
+    self.window.rootViewController = self.tabController;
     [self.window makeKeyAndVisible];
     
     NSLog(@"Screen resolution: %f x %f", self.window.screen.bounds.size.height, self.window.screen.bounds.size.width);

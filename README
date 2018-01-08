@@ -1,0 +1,5 @@
+brew install carthage
+carthage update
+
+npm install http-server
+cd ./http && http-server

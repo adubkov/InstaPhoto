@@ -1,0 +1,8 @@
+{
+    "firstName": "Alexey",
+    "lastName": "Dubkov",
+    "city": "San Jose",
+    "profilePhoto": "http://127.0.0.1:8080/users/photo.jpg",
+    "biography": "The biography!",
+    "memberSince": "January 2018!"
+}

@@ -15,12 +15,14 @@
 
 @implementation FeedTableViewController
 
-/*
- - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        self.title = @"Feed";
+        self.tabBarItem.image = [UIImage imageNamed:@"tab_icon_feed"];
+    }
     return self;
 }
- */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +33,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.title = @"Feed";
     self.imageTitleArray = @[@"Image 1", @"Image 2", @"Image 3", @"Image 4", @"Image 5"];
     self.imageFileNameArray = @[@"image_1", @"image_2", @"image_3", @"image_4", @"image_5"];
     
